@@ -1,6 +1,7 @@
 package org.lessons.java.christmas;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -21,6 +22,7 @@ public class Main {
             }
         }
 
+        Collections.sort(whishes);
         System.out.println("hai espresso i seguenti desideri: " + "\n" + whishes);
     }
 }
