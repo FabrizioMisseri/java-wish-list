@@ -11,6 +11,11 @@ public class Main {
         boolean flagList = true;
         Scanner scan = new Scanner(System.in);
 
+        System.out.println("Ciao come ti chiami?");
+        String name = scan.nextLine();
+        System.out.println("Dove abiti?");
+        String address = scan.nextLine();
+
         while(flagList){
             System.out.println("cosa desideri per natale?");
             String wish = scan.nextLine();
@@ -21,8 +26,22 @@ public class Main {
                 flagList = !flagList;
             }
         }
-
+        scan.close();
         Collections.sort(whishes);
+
         System.out.println("hai espresso i seguenti desideri: " + "\n" + whishes);
+
+        ChristmasLetter letter = new ChristmasLetter(name, address, whishes);
+
+        System.out.println();
+        try {
+            letter.send();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+        System.out.println();
+        System.out.println("SASSONE");
+
     }
 }

@@ -55,6 +55,8 @@ public class ChristmasLetter {
         if (!moralConduct){
             throw new RuntimeException("sei cattivo non puoi inviare");
         }
-        System.out.println("Caro Babbo Sassone sono " + name + "per natale vorrei:\n" + christmasLetter);
+        System.out.println("Caro Babbo Natale sono " + name + "per natale vorrei:\n" + christmasLetter);
     }
+
+
 }
