@@ -49,12 +49,12 @@ public class ChristmasLetter {
 
     // METHODS
     public void send(){
-        System.out.println("Caro Babbo Sassone per natale vorrei:\n" + christmasLetter);
         if (christmasLetter.size() > 5){
             throw new RuntimeException("hai superato le 5 richieste. Non puoi...");
         }
         if (!moralConduct){
             throw new RuntimeException("sei cattivo non puoi inviare");
         }
+        System.out.println("Caro Babbo Sassone sono " + name + "per natale vorrei:\n" + christmasLetter);
     }
 }
